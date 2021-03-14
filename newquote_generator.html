@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            .center{
+                text-align: center;
+                color:red;
+                background-image: url("https://image.shutterstock.com/image-vector/big-eyes-red-tiger-close-260nw-1351517303.jpg")
+            }
+            body{
+                background-image: url("https://i.ytimg.com/vi/GSEpGMKKjAI/maxresdefault.jpg");
+                background-repeat: repeat y;
+                background-position: bottom;
+                background-size: auto;
+            }
+            .generator{
+                background-color:yellowgreen;
+                text-align:center;
+                color:red;
+                font-size: 20px
+            }
+            .paddedborder{
+                border-width: 20px;
+                border-style: ridge;
+                border-color: turquoise;
+                color:salmon;
+            }
+
+        </style>
+        <meta charset="utf-8">
+        <title>Drippin Genie Lil Sk8ate</title>
+    </head>
+    <body>
+            <h1 class="center">
+                <strong>Drippin Genie Lil Sk8ate</strong><br>
+            </h1>
+            <p class="center" b>
+                <img src="https://i1.sndcdn.com/avatars-8y5HBthTPaokGCAr-rnwI3Q-t240x240.jpg" alt="Drippin Genie Lil Sk8ate"><br>
+            </p>
+
+            <script>
+                function GetValue()
+                    {
+                        var myarray= new Array("Lil Sk8ate from State Farm","Lil Sk8ate take yo girl out on a date","I be out the mud I be off the drugs I be smokin blunts", "Gucci bag full of cash like im Brady made the pass", "That shit look like the battle pass");
+                        var random = myarray[Math.floor(Math.random() * myarray.length)];
+                        var msg = new SpeechSynthesisUtterance(random);
+                        var voices = window.speechSynthesis.getVoices();
+                        msg.voice = voices[20]; // Note: some voices don't support altering params
+                        msg.voiceURI = 'native';
+                        msg.volume = 1; // 0 to 1
+                        msg.rate = 1; // 0.1 to 10
+                        msg.pitch = 3; //0 to 2
+                        msg.lang = 'en-US';
+
+                        speechSynthesis.speak(msg);
+
+                        //alert(random);
+                        document.getElementById("message").innerHTML=random;
+                    }
+             </script>
+             <div class="center";>
+             <input type="button" id="btnSearch" value="Your Lil Sk8ate quote of the day" onclick="GetValue();"/>
+             </div>
+             <p id="message" class="generator" ></p>
+
+
+            <p class="paddedborder">
+                Lil Sk8ate's Current Location:<br>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11254.684661889698!2d-113.33158055853674!3d45.1532572155744!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5359dd46b6880d85%3A0xc20d1839935bdd34!2sBloody%20Dick%20Peak!5e0!3m2!1sen!2sus!4v1615509708526!5m2!1sen!2sus" width="600" height="500" style="border:0;" allowfullscreen="" loading="lazy" class=""></iframe>
+            </p>
+    </body>
+</html>
